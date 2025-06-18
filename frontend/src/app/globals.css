@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 246, 248, 250;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl font-bold;
+  }
+  h2 {
+    @apply text-xl font-semibold;
+  }
+  h3 {
+    @apply text-lg font-medium;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors;
+  }
+  .btn-primary {
+    @apply bg-indigo-600 text-white hover:bg-indigo-700;
+  }
+  .btn-secondary {
+    @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-50;
+  }
+}
