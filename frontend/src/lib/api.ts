@@ -11,7 +11,7 @@ import {
 } from "@/types";
 
 const API_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api/v1";
+  `https://${process.env.NEXT_PUBLIC_API_URL}/v1/api` || "http://localhost:8000/api/v1";
 
 class ApiClient {
   private async request<T>(
